@@ -462,16 +462,15 @@ export const doctorIndexStyle = StyleSheet.create({
     // margin: 102,
     // marginRight: 24,
     marginBottom: 102,
-    paddingHorizontal:32,
+    paddingHorizontal: 32,
     padding: 0,
-    elevation:0,
-    borderRadius:260,
+    elevation: 0,
+    borderRadius: 260,
     position: "absolute",
     bottom: 0,
     right: 0,
     // overflow: "hidden",
     zIndex: 10,
-    
   },
   touch1: {
     width: 60,
@@ -629,9 +628,10 @@ export const doctorLandStyle = StyleSheet.create({
     display: "flex",
     // marginTop: 9,
     flexDirection: "column",
-    backgroundColor: '#f5f5f5',
-    padding:0,
-    borderRadius:12,
+    backgroundColor: "#f6f6f6",
+
+    padding: 0,
+    borderRadius: 12,
   },
   view10: {
     width: "100%",
@@ -659,18 +659,17 @@ export const doctorLandStyle = StyleSheet.create({
   touch1: {
     // backgroundColor: "#f5f5f5",
     marginBottom: 5,
-    padding: 3,
-    paddingHorizontal:4,
+    padding: 1,
+    paddingHorizontal: 4,
     marginTop: 0,
     borderRadius: 12,
-    
   },
   view11: {
     width: "100%",
     height: 52,
     display: "flex",
     flexDirection: "row",
-    
+
     // borderBottomColor: "#e0e0e0",
 
     alignItems: "center",
@@ -684,7 +683,7 @@ export const doctorLandStyle = StyleSheet.create({
     flexGrow: 1,
   },
   text15: {
-    fontSize: 16,
+    fontSize: 15,
     marginLeft: 12,
     fontFamily: "Inter-Medium",
   },
@@ -773,7 +772,7 @@ export const doctorLandStyle = StyleSheet.create({
     fontSize: 16,
   },
   text21: {
-    fontFamily: "Inter-Bold",
+    fontFamily: "Inter-Medium",
     fontSize: 20,
     color: "#000",
     marginTop: -2,

@@ -84,7 +84,7 @@ const RenderPatientTable = ({ theme, pData }) => {
           >
             Your Patients
           </Text>
-          <IconButton icon={"refresh"} onPress={()=>{}} />
+          <IconButton icon={"refresh"} onPress={() => {}} />
           {/*           
           <TouchableRipple onPress={() => {}} rippleColor={"rgba(0,0,0,0.1)"}>
             <Text style={{ color: "#3b82f6" }}>Refresh</Text>
@@ -104,8 +104,8 @@ const RenderPatientTable = ({ theme, pData }) => {
                   }}
                   style={{
                     ...dls.touch1,
-                    borderBottomWidth: i != pData.length-1 || i == 4 ? 1 : 0,
-                    borderBottomColor: '#e0e0e0',
+                    borderBottomWidth: i != pData.length - 1 || i == 4 ? 1 : 0,
+                    borderBottomColor: "#e9e9e9",
                   }}
                 >
                   <View style={dls.view11}>
@@ -129,27 +129,32 @@ const RenderPatientTable = ({ theme, pData }) => {
                 </TouchableRipple>
               );
           })}
-          <TouchableRipple style={{
-            width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center',
-            height: 52,
-            borderTopColor: '#e0e0e0',
-            borderTopWidth:1,
-          
-          }}>
-              <Text>View All</Text>
-            </TouchableRipple>
+          <TouchableRipple
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: 52,
+              borderTopColor: "#e9e9e9",
+              borderTopWidth: 1,
+            }}
+          >
+            <Text style={{ color: "#3B82F6", fontFamily: "Inter-Medium" }}>
+              View All
+            </Text>
+          </TouchableRipple>
         </View>
       </View>
     </>
   );
 };
 
-
 const BannerDeco = ({ theme }) => {
   return (
     <View style={{ padding: 24, paddingTop: 0, paddingBottom: 0 }}>
       <LinearGradient
-        colors={["#a78bfa", "#f472b6"]}
+        colors={["#a78bfa", "#9470FF"]}
         style={{
           backgroundColor: theme.colors.tertiaryContainer,
           ...dls.view13,
@@ -165,38 +170,6 @@ const BannerDeco = ({ theme }) => {
         </Text>
         <Image style={{ width: 100, height: 100 }} source={{ uri: deco1URL }} />
       </LinearGradient>
-    </View>
-  );
-};
-
-const BannerDeco2 = ({ theme }) => {
-  return (
-    <View style={{ padding: 24, paddingTop: 0, paddingBottom: 0 }}>
-      <View
-        style={{
-          // backgroundColor: theme.colors.tertiaryContainer,
-          borderRadius: 12,
-          width: "100%",
-          marginTop: 12,
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Image style={{ width: 150, height: 150 }} source={{ uri: deco2URL }} />
-        <Text
-          style={{
-            maxWidth: "60%",
-            fontFamily: "Inter-Bold",
-            fontSize: 22,
-            padding: 24,
-            color: theme.colors.tertiary,
-          }}
-        >
-          Somebetter tagline for doctors
-        </Text>
-      </View>
     </View>
   );
 };
@@ -365,7 +338,6 @@ const DoctorHomeSreen = ({}) => {
             hideModal={hideModal}
             visible={visible}
           />
-      
         </View>
       </ScrollView>
     </View>
