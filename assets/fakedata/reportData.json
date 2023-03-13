@@ -1,0 +1,290 @@
+[
+  {
+    "cid": 1143335461,
+    "did": "",
+    "pid": 8226933564,
+    "created_on": "11/23/2022",
+    "treatment": "Borreliosis",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 7
+  },
+  {
+    "cid": 7421584861,
+    "did": "",
+    "pid": 8226933564,
+    "created_on": "1/20/2022",
+    "treatment": "Cholera",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 5
+  },
+  {
+    "cid": 7341051449,
+    "did": "",
+    "pid": 8226933564,
+    "created_on": "6/12/2022",
+    "treatment": "Ciguatera fish poisoning (CFP)",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 10
+  },
+  {
+    "cid": 2986683665,
+    "did": "",
+    "pid": 8226933564,
+    "created_on": "11/30/2022",
+    "treatment": "Coronavirus",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 9
+  },
+  {
+    "cid": 6719022794,
+    "did": "",
+    "pid": 6271415027,
+    "created_on": "6/18/2022",
+    "treatment": "Diphtheria",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 10
+  },
+  {
+    "cid": 6348087396,
+    "did": "",
+    "pid": 6271415027,
+    "created_on": "4/26/2022",
+    "treatment": "Flu",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 4
+  },
+  {
+    "cid": 8105258354,
+    "did": "",
+    "pid": 6271415027,
+    "created_on": "1/9/2022",
+    "treatment": "Malaria",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 5
+  },
+  {
+    "cid": 6378088569,
+    "did": "",
+    "pid": 6796167932,
+    "created_on": "1/5/2022",
+    "treatment": "Coronavirus",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 8
+  },
+  {
+    "cid": 2103836764,
+    "did": "",
+    "pid": 6875729759,
+    "created_on": "4/10/2022",
+    "treatment": "Chickenpox (varicella)",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 3
+  },
+  {
+    "cid": 5165469177,
+    "did": "",
+    "pid": 6875729759,
+    "created_on": "1/16/2022",
+    "treatment": "Borreliosis",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 9
+  },
+  {
+    "cid": 7051870447,
+    "did": "",
+    "pid": 6875729759,
+    "created_on": "1/10/2022",
+    "treatment": "Cholera",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 4
+  },
+  {
+    "cid": 4666826275,
+    "did": "",
+    "pid": 6625833510,
+    "created_on": "2/14/2022",
+    "treatment": "Ciguatera fish poisoning (CFP)",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 9
+  },
+  {
+    "cid": 7117593335,
+    "did": "",
+    "pid": 6625833510,
+    "created_on": "7/9/2022",
+    "treatment": "Coronavirus",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 5
+  },
+  {
+    "cid": 8010193244,
+    "did": "",
+    "pid": 5392756273,
+    "created_on": "5/19/2022",
+    "treatment": "Diphtheria",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 9
+  },
+  {
+    "cid": 2560336282,
+    "did": "",
+    "pid": 5392756273,
+    "created_on": "5/31/2022",
+    "treatment": "Flu",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 2
+  },
+  {
+    "cid": 6890208324,
+    "did": "",
+    "pid": 5392756273,
+    "created_on": "1/20/2022",
+    "treatment": "Malaria",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 6
+  },
+  {
+    "cid": 5609348739,
+    "did": "",
+    "pid": 5392756273,
+    "created_on": "5/12/2022",
+    "treatment": "Coronavirus",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 10
+  },
+  {
+    "cid": 1920993843,
+    "did": "",
+    "pid": 5559570681,
+    "created_on": "7/2/2022",
+    "treatment": "Chickenpox (varicella)",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 10
+  },
+  {
+    "cid": 4066306815,
+    "did": "",
+    "pid": 3486201184,
+    "created_on": "8/22/2022",
+    "treatment": "Borreliosis",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 3
+  },
+  {
+    "cid": 7798348413,
+    "did": "",
+    "pid": 7250111545,
+    "created_on": "11/23/2022",
+    "treatment": "Borreliosis",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 9
+  },
+  {
+    "cid": 7157288817,
+    "did": "",
+    "pid": 6524915573,
+    "created_on": "6/3/2022",
+    "treatment": "Cholera",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 2
+  },
+  {
+    "cid": 4399528044,
+    "did": "",
+    "pid": 2480539535,
+    "created_on": "10/18/2022",
+    "treatment": "Ciguatera fish poisoning (CFP)",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 5
+  },
+  {
+    "cid": 2744969536,
+    "did": "",
+    "pid": 4738563843,
+    "created_on": "4/3/2022",
+    "treatment": "Coronavirus",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 6
+  },
+  {
+    "cid": 3201544478,
+    "did": "",
+    "pid": 5985690416,
+    "created_on": "6/29/2022",
+    "treatment": "Diphtheria",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 3
+  },
+  {
+    "cid": 8283605027,
+    "did": "",
+    "pid": 4958001619,
+    "created_on": "5/28/2022",
+    "treatment": "Flu",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 7
+  },
+  {
+    "cid": 2211613414,
+    "did": "",
+    "pid": 3944474711,
+    "created_on": "4/13/2022",
+    "treatment": "Malaria",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 5
+  },
+  {
+    "cid": 7789807439,
+    "did": "",
+    "pid": 2595986091,
+    "created_on": "3/27/2022",
+    "treatment": "Coronavirus",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 1
+  },
+  {
+    "cid": 6391316043,
+    "did": "",
+    "pid": 7933921994,
+    "created_on": "10/24/2022",
+    "treatment": "Chickenpox (varicella)",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 8
+  },
+  {
+    "cid": 5391024785,
+    "did": "",
+    "pid": 8654818536,
+    "created_on": "1/12/2022",
+    "treatment": "Borreliosis",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 4
+  },
+  {
+    "cid": 3812123421,
+    "did": "",
+    "pid": 5654755082,
+    "created_on": "9/30/2022",
+    "treatment": "Cholera",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 2
+  },
+  {
+    "cid": 1526584815,
+    "did": "",
+    "pid": 5075912949,
+    "created_on": "3/12/2022",
+    "treatment": "Ciguatera fish poisoning (CFP)",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 9
+  },
+  {
+    "cid": 3299749130,
+    "did": "",
+    "pid": 2004369539,
+    "created_on": "3/29/2022",
+    "treatment": "Coronavirus",
+    "medicines": ["Tamozine", "Azelanazole", "Triamtosine", "Adysumab"],
+    "quantity": 9
+  }
+]
