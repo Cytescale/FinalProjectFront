@@ -7,10 +7,12 @@ import SignupScreen from "./src/screen/signup";
 import ProfileEdit from "./src/screen/profile/profileedit";
 import LoginScreen from "./src/screen/login";
 import DoctorLandScreen from "./src/screen/doctor";
+import DoctorHomeSreen from "./src/screen/doctor";
 import DoctorAddPatientScreen from "./src/screen/doctor/addpatient";
 import DoctorPatientProfileScreen from "./src/screen/doctor/patientprofile";
 import DoctorPatientReportScreen from "./src/screen/doctor/report";
 import PatientLandScreen from "./src/screen/patient";
+import DoctorPatientScreen from "./src/screen/doctor/patients";
 import lighttheme from "./assets/theme";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { getAuthData, removeAuthData } from "./src/backend/authHelper";
@@ -71,7 +73,7 @@ export default function App() {
 
             <Stack.Screen
               name="doctorland"
-              component={DoctorLandScreen}
+              component={DoctorHomeSreen}
               options={{ headerShown: false }}
             />
 
@@ -99,6 +101,11 @@ export default function App() {
             <Stack.Screen
               name="profileedit"
               component={ProfileEdit}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="patientlist"
+              component={DoctorPatientScreen}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

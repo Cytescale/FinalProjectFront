@@ -14,6 +14,7 @@ import {
   Searchbar,
   IconButton,
   ActivityIndicator,
+  Appbar,
 } from "react-native-paper";
 import {
   Text,
@@ -25,6 +26,7 @@ import {
   SectionList,
   VirtualizedList,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { customerArr, RandomColorString } from "./land";
 import { useNavigation } from "@react-navigation/native";
 import { doctorPatientStyle as dps } from "../../styles/land.style";
@@ -32,6 +34,7 @@ import patientData from "../../../assets/fakedata/patientData.json";
 import { StatusBar } from "expo-status-bar";
 import { getAuthData } from "../../backend/authHelper";
 import { getUserDatabyUID, getRelationsByDID } from "../../backend/dbHelper";
+import { doctorIndexStyle as dis } from "../../styles/land.style";
 
 const RenderPatientGridTable = ({ searchString, pData }) => {
   const navigation = useNavigation();
@@ -159,14 +162,6 @@ const RenderPatientTable = ({ searchString, pData }) => {
                       </Text>
                     </View>
                   </View>
-                  <Text
-                    style={{
-                      color: theme.colors.secondary,
-                      ...dps.text5,
-                    }}
-                  >
-                    active
-                  </Text>
                 </View>
               </TouchableRipple>
             );
@@ -207,64 +202,84 @@ const DoctorPatientScreen = ({ navigation }) => {
   const theme = useTheme();
   return (
     <>
-      <View style={{ ...dps.view5 }}>
-        <View style={dps.view13}>
-          <View
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              borderRadius: 120,
-              height: 42,
-              alignItems: "center",
-              backgroundColor: theme.colors.secondaryContainer,
-            }}
-          >
-            <Searchbar
-              icon={"magnify"}
-              placeholder="Search Patients"
-              value={searchString}
-              onChangeText={(t) => setsearchString(t)}
-              inputStyle={{
-                fontSize: 15,
-              }}
-              iconColor={theme.colors.secondary}
-              style={{
-                elevation: 0,
-                height: 42,
-                backgroundColor: theme.colors.secondaryContainer,
-                borderRadius: 120,
-                display: "flex",
-                flexGrow: 1,
-              }}
-              elevation={0}
-            />
-            <IconButton
-              icon={!gridView ? "dots-grid" : "view-list"}
-              iconColor={theme.colors.secondary}
-              backgroundColor={theme.colors.secondaryContainer}
-              size={19}
-              style={{ borderRadius: 120 }}
-              onPress={() => {
-                toggleGridView();
-              }}
-            />
+      <Appbar.Header mode="small">
+        <Appbar.BackAction
+          onPress={() => {
+            navigation.goBack();
+          }}
+        />
+        <Appbar.Content title="Patients" />
+      </Appbar.Header>
+      <View style={dis.view3}>
+        <View
+          style={{
+            backgroundColor: theme.colors.background,
+            minHeight: "100%",
+          }}
+        >
+          <View style={{ ...dps.view5 }}>
+            <View style={dps.view13}>
+              <View
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  borderRadius: 120,
+                  height: 42,
+                  alignItems: "center",
+                  backgroundColor: theme.colors.secondaryContainer,
+                }}
+              >
+                <Searchbar
+                  icon={"magnify"}
+                  placeholder="Search Patients"
+                  value={searchString}
+                  onChangeText={(t) => setsearchString(t)}
+                  inputStyle={{
+                    fontSize: 15,
+                  }}
+                  iconColor={theme.colors.secondary}
+                  style={{
+                    elevation: 0,
+                    height: 42,
+                    backgroundColor: theme.colors.secondaryContainer,
+                    borderRadius: 120,
+                    display: "flex",
+                    flexGrow: 1,
+                  }}
+                  elevation={0}
+                />
+                <IconButton
+                  icon={!gridView ? "dots-grid" : "view-list"}
+                  iconColor={theme.colors.secondary}
+                  backgroundColor={theme.colors.secondaryContainer}
+                  size={19}
+                  style={{ borderRadius: 120 }}
+                  onPress={() => {
+                    toggleGridView();
+                  }}
+                />
+              </View>
+            </View>
+            {loading ? (
+              <ActivityIndicator
+                animating={true}
+                style={{ marginTop: 32 }}
+                color={"#000"}
+              />
+            ) : !gridView ? (
+              <RenderPatientTable
+                searchString={searchString}
+                pData={patientData}
+              />
+            ) : (
+              <RenderPatientGridTable
+                searchString={searchString}
+                pData={patientData}
+              />
+            )}
           </View>
         </View>
-        {loading ? (
-          <ActivityIndicator
-            animating={true}
-            style={{ marginTop: 32 }}
-            color={"#000"}
-          />
-        ) : !gridView ? (
-          <RenderPatientTable searchString={searchString} pData={patientData} />
-        ) : (
-          <RenderPatientGridTable
-            searchString={searchString}
-            pData={patientData}
-          />
-        )}
       </View>
     </>
   );

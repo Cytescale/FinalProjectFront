@@ -13,37 +13,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import DoctorHomeSreen from "./land";
 import DoctorPatientScreen from "./patients";
 import { doctorIndexStyle as dis } from "../../styles/land.style";
-import MatIcon from "@expo/vector-icons/MaterialIcons"
-export const FabButton = ({ navigation, index }) => {
-  const theme = useTheme();
-  return (
-    <View style={dis.view1}>
-      <TouchableRipple
-        icon={"account-plus"}
-        onPress={() => {
-          navigation.navigate("doctoradd");
-        }}
-        iconColor={theme.colors.secondary}
-        style={{
-          width: "100%",
-          height: 52,
-          borderRadius: 12,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems:'center',
-          backgroundColor: theme.colors.primary,
-          elevation: 10,
-        }}
-      >
-        <View style={{display:'flex',flexDirection:'row', justifyContent:'center',alignItems:'center'}}>
-          <MatIcon name="add" size={22} color={theme.colors.onPrimary} />
-          <Text style={{ fontSize: 16,marginLeft:6, color:theme.colors.onPrimary, fontFamily: "Inter-Medium" }}>Add Report</Text>
-        </View>
-      </TouchableRipple>
-    </View>
-  );
-};
-const DoctorLandScreen = ({ navigation }) => {
+import { useNavigation } from "@react-navigation/native";
+DoctorLandScreen = ({ navigation }) => {
   const [index, setIndex] = React.useState(0);
   const theme = useTheme();
   const [routes] = React.useState([
@@ -64,7 +35,7 @@ const DoctorLandScreen = ({ navigation }) => {
     home: DoctorHomeSreen,
     patients: DoctorPatientScreen,
   });
-
+  return <DoctorHomeSreen navigation={navigation} />;
   return (
     <SafeAreaView>
       <FabButton navigation={navigation} index={index} />
@@ -84,4 +55,4 @@ const DoctorLandScreen = ({ navigation }) => {
   );
 };
 
-export default DoctorLandScreen;
+export default DoctorHomeSreen;

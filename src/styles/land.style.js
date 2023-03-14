@@ -461,7 +461,7 @@ export const doctorIndexStyle = StyleSheet.create({
     height: "auto",
     // margin: 102,
     // marginRight: 24,
-    marginBottom: 102,
+    marginBottom: 32,
     paddingHorizontal: 32,
     padding: 0,
     elevation: 0,
@@ -588,7 +588,7 @@ export const doctorLandStyle = StyleSheet.create({
   },
   text10: {
     fontFamily: "Inter-Medium",
-    fontSize: 14,
+    fontSize: 16,
     paddingLeft: 3,
     marginTop: 32,
   },
@@ -601,7 +601,7 @@ export const doctorLandStyle = StyleSheet.create({
     borderRadius: 8,
 
     //   elevation: 2,
-    marginTop: 9,
+    marginTop: 12,
     padding: 12,
     paddingTop: 6,
     paddingBottom: 12,
@@ -629,7 +629,7 @@ export const doctorLandStyle = StyleSheet.create({
     // marginTop: 9,
     flexDirection: "column",
     backgroundColor: "#f6f6f6",
-
+    marginTop: 12,
     padding: 0,
     borderRadius: 12,
   },
@@ -729,7 +729,7 @@ export const doctorLandStyle = StyleSheet.create({
   },
   text19: {
     maxWidth: "60%",
-    fontFamily: "Inter-Bold",
+    fontFamily: "Inter-SemiBold",
     fontSize: 22,
   },
   view14: {
@@ -821,9 +821,10 @@ export const doctorPatientStyle = StyleSheet.create({
     padding: 10,
   },
   touch1: {
-    marginBottom: 5,
-    marginTop: 5,
+    paddingVertical: 5,
     borderRadius: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: "#e9e9e9",
   },
   view3: {
     width: "100%",
@@ -891,8 +892,6 @@ export const doctorPatientStyle = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-
-    marginTop: 12,
     padding: 24,
     paddingTop: 0,
     paddingBottom: 0,
