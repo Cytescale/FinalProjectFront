@@ -14,6 +14,7 @@ import DoctorPatientReportScreen from "./src/screen/doctor/report";
 import PatientLandScreen from "./src/screen/patient";
 import DoctorPatientScreen from "./src/screen/doctor/patients";
 import lighttheme from "./assets/theme";
+import CameraLand from "./src/screen/report/camera";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { getAuthData, removeAuthData } from "./src/backend/authHelper";
 import { getUserDatabyUID } from "./src/backend/dbHelper";
@@ -86,6 +87,11 @@ export default function App() {
             <Stack.Screen
               name="doctorpatient"
               component={DoctorPatientProfileScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="cameraland"
+              component={CameraLand}
               options={{ headerShown: false }}
             />
             <Stack.Screen

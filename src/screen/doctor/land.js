@@ -46,7 +46,7 @@ export const FabButton = ({ index }) => {
       <TouchableRipple
         icon={"account-plus"}
         onPress={() => {
-          navigation.navigate("doctoradd");
+          navigation.navigate("cameraland");
         }}
         iconColor={theme.colors.secondary}
         style={{
@@ -77,7 +77,7 @@ export const FabButton = ({ index }) => {
               fontFamily: "Inter-Medium",
             }}
           >
-            Add Report
+            Add Report / Patient
           </Text>
         </View>
       </TouchableRipple>
@@ -160,8 +160,8 @@ const RenderPatientTable = ({ theme, pData }) => {
                       <Avatar.Text
                         size={32}
                         label={e.patientData.fname[0]}
-                        color={theme.colors.onSurface}
-                        style={{ backgroundColor: RandomColorString() }}
+                        color={"#fff"}
+                        style={{ backgroundColor: "#232323" }}
                       />
                       <Text style={dls.text15}>
                         {e.patientData.fname} {e.patientData.lname}
