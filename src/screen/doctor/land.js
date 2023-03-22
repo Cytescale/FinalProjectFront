@@ -46,18 +46,19 @@ export const FabButton = ({ index }) => {
       <TouchableRipple
         icon={"account-plus"}
         onPress={() => {
+          // navigation.navigate("createreport");
           navigation.navigate("cameraland");
         }}
         iconColor={theme.colors.secondary}
         style={{
           width: "100%",
           height: 52,
-          borderRadius: 12,
+          borderRadius: 120,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: theme.colors.primary,
-          elevation: 10,
+          elevation: 2,
         }}
       >
         <View
@@ -87,19 +88,23 @@ export const FabButton = ({ index }) => {
 
 const RenderToolTip = ({ theme }) => {
   return (
-    <View style={{ padding: 32, paddingTop: 0, paddingBottom: 0 }}>
+    <View style={{ padding: 26, paddingTop: 0, paddingBottom: 0 }}>
       <Text
         style={{
           color: theme.colors.secondary,
           ...dls.text10,
+          paddingLeft: 6,
         }}
       >
         Today's tip
       </Text>
       <View
-        style={{ ...dls.view7, backgroundColor: theme.colors.primaryContainer }}
+        style={{
+          ...dls.view7,
+          backgroundColor: theme.colors.tertiaryContainer,
+        }}
       >
-        <Text style={{ ...dls.text11, color: theme.colors.onPrimaryContainer }}>
+        <Text style={{ ...dls.text11, color: "#000" }}>
           💡 You can change the color
         </Text>
       </View>
@@ -121,8 +126,8 @@ const RenderPatientTable = ({ theme, pData }) => {
       <View
         style={{
           width: "100%",
-          marginTop: 32,
-          padding: 32,
+          marginTop: 22,
+          padding: 26,
           paddingTop: 0,
           paddingBottom: 0,
         }}
@@ -132,12 +137,15 @@ const RenderPatientTable = ({ theme, pData }) => {
             style={{
               color: theme.colors.secondary,
               ...dls.text12,
+              paddingLeft: 4,
             }}
           >
             Your Patients
           </Text>
         </View>
-        <View style={dls.view9}>
+        <View
+          style={{ ...dls.view9, backgroundColor: "#F5F1FF", paddingTop: 6 }}
+        >
           {pData.map((e, i) => {
             if (i < 5)
               return (
@@ -160,8 +168,8 @@ const RenderPatientTable = ({ theme, pData }) => {
                       <Avatar.Text
                         size={32}
                         label={e.patientData.fname[0]}
-                        color={"#fff"}
-                        style={{ backgroundColor: "#232323" }}
+                        color={"#000"}
+                        style={{ backgroundColor: RandomColorString() }}
                       />
                       <Text style={dls.text15}>
                         {e.patientData.fname} {e.patientData.lname}

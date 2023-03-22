@@ -6,16 +6,11 @@ import React, {
   useState,
   useEffect,
 } from "react";
-import {
-  Alert,
-  RefreshControl,
-  Dimensions,
-  Platform,
-  TextInput,
-} from "react-native";
+import { Alert, RefreshControl, Dimensions, Platform } from "react-native";
 import {
   TouchableRipple,
   useTheme,
+  TextInput,
   Avatar,
   Button,
   Menu,
@@ -195,7 +190,7 @@ const CameraLand = ({}) => {
     try {
       const res = await getUserDatabyUID(uid);
       if (!res.errorBool) {
-        navigation.navigate("doctoradd", {
+        navigation.navigate("createreport", {
           pid: patientIdInp,
         });
         setLoading(false);
@@ -261,21 +256,23 @@ const CameraLand = ({}) => {
               >
                 Scan Patient QR
               </Text>
-              <Text style={{ marginBottom: 8, fontSize: 14 }}>Patient ID</Text>
+              {/* <Text style={{ marginBottom: 8, fontSize: 14 }}>Patient ID</Text> */}
               <TextInput
                 textColor="#000"
                 placeholder="Enter patient profile id"
                 value={patientIdInp}
                 onChangeText={setpatientIdInp}
                 cursorColor={"#000"}
+                label="Patient Unique Id"
+                mode="outlined"
                 style={{
                   width: "100%",
-                  height: 42,
+                  // height: 52,
                   backgroundColor: "#fff",
-                  borderWidth: 1,
-                  borderColor: "#bdbdbd",
+                  // borderWidth: 1,
+                  // borderColor: "#bdbdbd",
                   borderRadius: 8,
-                  paddingLeft: 12,
+                  // paddingLeft: 12,
                   marginBottom: 22,
                 }}
               />
@@ -297,9 +294,9 @@ const CameraLand = ({}) => {
                   style={{
                     width: "100%",
                     flex: 1,
-                    backgroundColor: "#000",
+                    backgroundColor: theme.colors.primary,
                     color: "#fff",
-                    borderRadius: 8,
+                    borderRadius: 120,
                     height: 52,
                     display: "flex",
                     justifyContent: "center",

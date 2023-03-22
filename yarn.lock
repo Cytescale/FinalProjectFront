@@ -3183,6 +3183,13 @@ expo-constants@~14.0.0, expo-constants@~14.0.2:
     "@expo/config" "~7.0.2"
     uuid "^3.3.2"
 
+expo-document-picker@~11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/expo-document-picker/-/expo-document-picker-11.0.1.tgz#1655e1cfacc20fe70ba81e310365048804bcf803"
+  integrity sha512-mLpk5a6yP/wK8DfGMQj9YoPlxiK87Vhxo6S+NnQgKCove8z+cJdkjEcXCpSsH6LXe1HJBDFt5LkwjhSff7bhMg==
+  dependencies:
+    uuid "^3.3.2"
+
 expo-error-recovery@~4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/expo-error-recovery/-/expo-error-recovery-4.0.1.tgz"
@@ -3206,6 +3213,11 @@ expo-image-loader@~4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/expo-image-loader/-/expo-image-loader-4.0.0.tgz#a17e5f95a4c1671791168dd5dfc221bf2f88480c"
   integrity sha512-hVMhXagsO1cSng5s70IEjuJAuHy2hX/inu5MM3T0ecJMf7L/7detKf22molQBRymerbk6Tzu+20h11eU0n/3jQ==
+
+expo-intent-launcher@~10.3.1:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/expo-intent-launcher/-/expo-intent-launcher-10.3.1.tgz#1479400f5f63096f73361f506bb4f7e067b050e6"
+  integrity sha512-T48ENkhcAkOkzKs3edGjNaCljfoEs/cyDQzAryjQdR8Wy5/BZwAPBd+ihf2Hzx1NhExatKFcWuKbwXvKDS+xkA==
 
 expo-keep-awake@~11.0.1:
   version "11.0.1"

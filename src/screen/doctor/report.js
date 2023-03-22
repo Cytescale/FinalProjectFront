@@ -10,12 +10,29 @@ import {
   Appbar,
   Divider,
   ActivityIndicator,
+  TouchableRipple,
 } from "react-native-paper";
-import { Text, View, ScrollView, Image, ToastAndroid } from "react-native";
+import {
+  Text,
+  View,
+  ScrollView,
+  Image,
+  ToastAndroid,
+  Alert,
+} from "react-native";
 import { doctorPatientReportStyle as drs } from "../../styles/land.style";
 import reportData from "../../../assets/fakedata/reportData.json";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { getRecordDataByRID, getUserDatabyUID } from "../../backend/dbHelper";
+import MatIcon from "@expo/vector-icons/MaterialIcons";
+import { startActivityAsync, ActivityAction } from "expo-intent-launcher";
+
+import * as FileSystem from "expo-file-system";
+
+import {
+  getRecordDataByRID,
+  getUserDatabyUID,
+  getRecordFilebyCID,
+} from "../../backend/dbHelper";
 
 const assArt =
   "https://imgproxy-us-east-2-new.icons8.com/i54OYf6ih-ZFDbPUsqkuSwF53-x2_P4WlCZX_kUjAsE/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvODA3/LzAxYzA0YTkwLTEx/NzMtNDllZS1iNWJm/LTYzMTYzYjJkNWNm/NC5zdmc.png";
@@ -59,7 +76,7 @@ const DoctorPatientReportScreen = ({ route, navigation }) => {
     if (pram) {
       const run = async () => {
         const recordsDataRes = await getRecordDataByRID(pram.cid);
-        console.log(recordsDataRes);
+        // console.log(recordsDataRes);
         if (!recordsDataRes.errorBool) {
           setrepr(recordsDataRes.response);
           const drdatares = await getUserDatabyUID(
@@ -76,6 +93,39 @@ const DoctorPatientReportScreen = ({ route, navigation }) => {
       run();
     }
   }, []);
+
+  const handleFileOpen = async () => {
+    try {
+      const res = await getRecordFilebyCID(repr.file_cid);
+      if (!res.errorBool) {
+        const fileData = res.response.data;
+        let fileUri = FileSystem.documentDirectory;
+        console.log(fileUri);
+
+        const { StorageAccessFramework } = FileSystem;
+        const safURI = StorageAccessFramework.createFileAsync(
+          fileUri,
+          "temp_data.txt",
+          "text/plain"
+        );
+        console.log(safURI);
+        // await FileSystem.writeAsStringAsync(fileUri, fileData, {
+        //   encoding: FileSystem.EncodingType.UTF8,
+        // });
+        // const data = await FileSystem.getContentUriAsync(fileUri);
+        // await startActivityAsync("android.intent.action.VIEW", {
+        //   data: data,
+        //   type: "text/plain",
+        // });
+      } else {
+        Alert.alert(res.errorMessage);
+      }
+    } catch (e) {
+      console.log(e.message);
+      Alert.alert(e.message);
+    }
+  };
+
   if (loading || !repr)
     return (
       <>
@@ -193,6 +243,83 @@ const DoctorPatientReportScreen = ({ route, navigation }) => {
           >
             {repr.txn_hash}
           </Text>
+
+          {repr.metadata ? (
+            <>
+              <Text
+                style={{
+                  ...drs.text5,
+                  color: theme.colors.secondary,
+                }}
+              >
+                Record Attachment
+              </Text>
+              <TouchableRipple
+                onPress={handleFileOpen}
+                rippleColor={"rgba(0,0,0,0.25)"}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  padding: 12,
+                  backgroundColor: "#f5f5f5",
+                  marginTop: 12,
+                  borderRadius: 12,
+                }}
+              >
+                <View
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <MatIcon name="file-present" size={32} />
+                  <View style={{ display: "flex", flex: 1, marginLeft: 12 }}>
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: theme.colors.tertiary,
+                      }}
+                    >
+                      {JSON.parse(repr.metadata)
+                        .originalname.toString()
+                        .substring(0, 20)}
+                      ...
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: theme.colors.secondary,
+                      }}
+                    >
+                      {JSON.parse(repr.metadata)
+                        .size.toString()
+                        .substring(0, 20)}
+                    </Text>
+                  </View>
+                  <View>
+                    <TouchableRipple
+                      onPress={() => {}}
+                      rippleColor="rgba(0,0,0,0.25)"
+                      style={{
+                        padding: 5,
+                        overflow: "hidden",
+                        borderRadius: 120,
+                        backgroundColor: theme.colors.secondaryContainer,
+                      }}
+                    >
+                      <MatIcon
+                        name="chevron-right"
+                        size={22}
+                        color={theme.colors.secondary}
+                      />
+                    </TouchableRipple>
+                  </View>
+                </View>
+              </TouchableRipple>
+            </>
+          ) : null}
 
           <RenderMedicineTable rep={repr} />
           <Text

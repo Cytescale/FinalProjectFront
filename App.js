@@ -15,6 +15,7 @@ import PatientLandScreen from "./src/screen/patient";
 import DoctorPatientScreen from "./src/screen/doctor/patients";
 import lighttheme from "./assets/theme";
 import CameraLand from "./src/screen/report/camera";
+import CreateRecordPane from "./src/screen/report/create";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { getAuthData, removeAuthData } from "./src/backend/authHelper";
 import { getUserDatabyUID } from "./src/backend/dbHelper";
@@ -92,6 +93,11 @@ export default function App() {
             <Stack.Screen
               name="cameraland"
               component={CameraLand}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="createreport"
+              component={CreateRecordPane}
               options={{ headerShown: false }}
             />
             <Stack.Screen
